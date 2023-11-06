@@ -30,7 +30,7 @@ class ANETdetection(object):
     def __init__(self, ground_truth_filename=None, prediction_filename=None,
                  ground_truth_fields=GROUND_TRUTH_FIELDS,
                  prediction_fields=PREDICTION_FIELDS,
-                 tiou_thresholds=np.linspace(0.5, 0.95, 10), 
+                 tiou_thresholds=np.linspace(0.3, 0.7, 5),
                  subset='validation', verbose=False, 
                  check_status=False):
         if not ground_truth_filename:
@@ -212,7 +212,7 @@ class ANETdetection(object):
         return self.mAP, self.average_mAP
 
 
-def compute_average_precision_detection(ground_truth, prediction, tiou_thresholds=np.linspace(0.5, 0.95, 10)):
+def compute_average_precision_detection(ground_truth, prediction, tiou_thresholds=np.linspace(0.3, 0.7, 5)):
     """Compute average precision (detection task) between ground truth and
     predictions data frames. If multiple predictions occurs for the same
     predicted segment, only the one with highest score is matches as

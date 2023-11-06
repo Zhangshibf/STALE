@@ -42,11 +42,11 @@ if __name__ == '__main__':
     model = STALE()
     model = torch.nn.DataParallel(model, device_ids=[0]).cuda()
     ### Load Checkpoint ###
-    checkpoint = torch.load(output_path + "/STALE_best_"+str(split)+"_split.pth.tar")
+    checkpoint = torch.load("/home/CE/zhangshi/checkpoint/STALE_best_50_split.pth.tar")
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
     ### Load Dataloader ###
-    test_loader = torch.utils.data.DataLoader(stale_dataset.STALEDataset(subset="validation", mode='inference'),
+    test_loader = torch.utils.data.DataLoader(stale_dataset.STALEDataset(subset="test", mode='inference'),
                                               batch_size=1, shuffle=False,
                                               num_workers=8, pin_memory=True, drop_last=False)
 
