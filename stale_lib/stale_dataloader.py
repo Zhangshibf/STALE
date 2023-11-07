@@ -90,6 +90,10 @@ class STALEDataset(data.Dataset):
             lbl_dict = split_t2_test
             self.class_to_idx = t2_dict_test
             self.num_classes = 10
+        elif self.split == 50 and subset == "validation":
+            lbl_dict = split_t2_test
+            self.class_to_idx = t2_dict_test
+            self.num_classes = 10
         elif self.split == 75 and subset == "train":
             lbl_dict = split_t1_train
             self.class_to_idx = t1_dict_train
