@@ -80,7 +80,6 @@ class STALEDataset(data.Dataset):
 
     def getAnnotation(self, subset, anno):
         print(subset)
-        print(anno)
         temporal_dict={}
         # lbl_dct = list(activity_dict.keys())
         if self.split == 50 and subset == "train":
