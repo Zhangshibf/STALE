@@ -107,8 +107,8 @@ if __name__ == '__main__':
         splits = (100 - config['dataset']['split']) / 100
         class_thres = config['testing']['cls_thresh']
         # num_class = config['dataset']['num_classes']
-        num_class = int(splits*config['dataset']['num_classes'])
-        # num_class = 50
+        #num_class = int(splits*config['dataset']['num_classes'])
+        num_class = 10
         top_k_snip = config['testing']['top_k_snip']
         class_snip_thresh = config['testing']['class_thresh']
         mask_snip_thresh = config['testing']['mask_thresh']
