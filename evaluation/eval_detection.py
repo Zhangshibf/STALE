@@ -113,7 +113,6 @@ class ANETdetection(object):
                                      't-end': t_end_lst,
                                      'label': label_lst})
         print(activity_index)
-        activity_index = {'BaseballPitch': 0, 'CleanAndJerk': 1, 'CricketShot': 2, 'Diving': 3, 'FrisbeeCatch': 4, 'GolfSwing': 5, 'LongJump': 6, 'Shotput': 7, 'TennisSwing': 8, 'VolleyballSpiking': 9}
         return ground_truth, activity_index
 
     def _import_prediction(self, prediction_filename):
