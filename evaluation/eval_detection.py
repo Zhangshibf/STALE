@@ -113,8 +113,7 @@ class ANETdetection(object):
                                      't-start': t_start_lst,
                                      't-end': t_end_lst,
                                      'label': label_lst})
-        if self.verbose:
-            print(activity_index)
+        print(activity_index)
         return ground_truth, activity_index
 
     def _import_prediction(self, prediction_filename):
