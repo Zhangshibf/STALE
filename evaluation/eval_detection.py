@@ -114,7 +114,8 @@ class ANETdetection(object):
                                      't-start': t_start_lst,
                                      't-end': t_end_lst,
                                      'label': label_lst})
-        print(activity_index)
+        print("ground truth")
+        print(ground_truth)
         return ground_truth, activity_index
 
     def _import_prediction(self, prediction_filename):
