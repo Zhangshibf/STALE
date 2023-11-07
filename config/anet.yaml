@@ -1,5 +1,5 @@
 dataset:
-  num_classes: 20
+  num_classes: 200
   split: 50
   training:
     video_info_path: "./data/thumos2014/video_info_new.csv"
