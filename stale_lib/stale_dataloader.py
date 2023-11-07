@@ -42,8 +42,8 @@ class STALEDataset(data.Dataset):
         # self.num_classes = 150
         # self.num_classes = config['dataset']['num_classes']
         self.class_to_idx = activity_dict
-        #video_infos = self.get_video_info(self.video_info_path)
-        #self.info = video_infos
+        video_infos = self.get_video_info(self.video_info_path)
+        self.info = video_infos
         video_annos = self.get_video_anno(video_infos, self.video_anno_path)
         self.subset_mask = self.getVideoMask(video_annos,self.temporal_scale)
         self.subset_mask_list = list(self.subset_mask.keys())
