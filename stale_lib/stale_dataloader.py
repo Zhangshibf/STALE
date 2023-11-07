@@ -111,7 +111,7 @@ class STALEDataset(data.Dataset):
                 for j in range(len(labels)):
                     tmp_info = labels[j]
                     clip_factor = self.temporal_scale / ( corr_sec * (self.num_frame+1) )
-                    action_start = tmp_info['segment'][0]*clip_factor
+                    action_start = float(tmp_info['segment'][0])*clip_factor
                     snip_start = max(min(1, tmp_info['segment'][0] / corr_sec), 0)
                     action_end = tmp_info['segment'][1]*clip_factor
                     snip_end = max(min(1, tmp_info['segment'][1] / corr_sec), 0)
