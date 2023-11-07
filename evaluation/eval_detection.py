@@ -236,6 +236,8 @@ def compute_average_precision_detection(ground_truth, prediction, tiou_threshold
     ap : float
         Average precision score.
     """
+    print("prediction")
+    print(prediction)
     ap = np.zeros(len(tiou_thresholds))
     if prediction.empty:
         return ap
