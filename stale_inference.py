@@ -206,8 +206,7 @@ if __name__ == '__main__':
                         r = max((list(y) for (x,y) in itertools.groupby((enumerate(filtered_seq_int)),operator.itemgetter(1)) if x == 1), key=len)
                         start_pt = r[0][0]
                         end_pt = r[-1][0]
-                        print("score_map")
-                        print(score_map)
+
                         if (end_pt - start_pt)/tscale > 0.02 :
 
                         #### get (start,end,cls_score,reg_score,label) for each top-k snip ####
