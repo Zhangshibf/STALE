@@ -19,10 +19,9 @@ nms_thresh = config['testing']['nms_thresh']
 from evaluation.eval_detection import ANETdetection
 anet_detection = ANETdetection(
     ground_truth_filename="./evaluation/thumos_new.json",
-    prediction_filename=os.path.join(output_path, "detection_result_nms{}.json".format(nms_thresh)),
+    prediction_filename="stale_output.csv"),
     subset='validation', verbose=False, check_status=False)
-pre = os.path.join(output_path, "detection_result_nms{}.json".format(nms_thresh))
-print(pre)
+
 anet_detection.evaluate()
 
 mAP_at_tIoU = [f'mAP@{t:.2f} {mAP*100:.3f}' for t, mAP in zip(anet_detection.tiou_thresholds, anet_detection.mAP)]
