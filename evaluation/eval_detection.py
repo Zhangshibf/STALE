@@ -95,10 +95,8 @@ class ANETdetection(object):
             # print(videoid, pred_videos[2:])
             if videoid in pred_videos:
                 subs = videoid.split("_")[1]
-                print(subs)
-                print("self.subset")
-                print(self.subset)
-                #subs = videoid.split("_")[1]+"ing"
+                if subs == 'test':
+                    subs = subs+"ing"
                 if self.subset != subs:
                     continue
                 if videoid in self.blocked_videos:
