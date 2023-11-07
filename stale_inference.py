@@ -52,7 +52,7 @@ if __name__ == '__main__':
     model.load_state_dict(new_state_dict)
     model.eval()
     ### Load Dataloader ###
-    test_loader = torch.utils.data.DataLoader(stale_dataset.STALEDataset(subset="test", mode='inference'),
+    test_loader = torch.utils.data.DataLoader(stale_dataset.STALEDataset(subset="validation", mode='inference'),
                                               batch_size=1, shuffle=False,
                                               num_workers=8, pin_memory=True, drop_last=False)
 
@@ -62,6 +62,7 @@ if __name__ == '__main__':
         class_to_idx = t2_dict_test
     elif split == 25 :
         class_to_idx = t1_dict_test
+
     print("------------------")
     print(class_to_idx)
     key_list = list(class_to_idx.keys())
