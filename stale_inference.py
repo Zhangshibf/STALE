@@ -62,7 +62,8 @@ if __name__ == '__main__':
         class_to_idx = t2_dict_test
     elif split == 25 :
         class_to_idx = t1_dict_test
-
+    print("------------------")
+    print(class_to_idx)
     key_list = list(class_to_idx.keys())
     val_list = list(class_to_idx.values())
 
