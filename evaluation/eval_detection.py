@@ -93,8 +93,8 @@ class ANETdetection(object):
         video_lst, t_start_lst, t_end_lst, label_lst = [], [], [], []
         for videoid, v in data['database'].items():
             # print(videoid, pred_videos[2:])
-            print(videoid)
-            if "v_"+videoid in pred_videos:
+            if videoid in pred_videos:
+                print(videoid)
 
 
                 if self.subset != v['subset']:
