@@ -112,9 +112,9 @@ class STALEDataset(data.Dataset):
                     tmp_info = labels[j]
                     clip_factor = self.temporal_scale / ( corr_sec * (self.num_frame+1) )
                     action_start = float(tmp_info['segment'][0])*clip_factor
-                    snip_start = max(min(1, tmp_info['segment'][0] / corr_sec), 0)
-                    action_end = tmp_info['segment'][1]*clip_factor
-                    snip_end = max(min(1, tmp_info['segment'][1] / corr_sec), 0)
+                    snip_start = max(min(1, float(tmp_info['segment'][0]) / corr_sec), 0)
+                    action_end = float(tmp_info['segment'][1])*clip_factor
+                    snip_end = max(min(1, float(tmp_info['segment'][1] )/ corr_sec), 0)
                     gt_label = tmp_info["label"]
 
                 if action_end - action_start > 1 and gt_label in lbl_dict:
