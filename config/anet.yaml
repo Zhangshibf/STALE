@@ -17,7 +17,7 @@ model:
   embedding_head: 4
   # feat_dim: 2048
   feat_dim: 512
-  temporal_scale: 100
+  temporal_scale: 256
   clip_pretrain: "O" ## K : KInetics , O : openAI
 
 training:
