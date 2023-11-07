@@ -3,13 +3,13 @@ dataset:
   split: 50
   training:
     video_info_path: "./data/thumos2014/video_info_new.csv"
-    video_anno_path: "./data/thumos2014/anet_anno_action.json"
+    video_anno_path: "./data/thumos2014/thumos_anno_action.json"
     num_frame: 5
     output_path: './data/thumos2014/train_output/'
     
   testing:
     video_info_path: "./data/thumos2014/video_info_new.csv"
-    video_anno_path: "./data/thumos2014/anet_anno_action.json"
+    video_anno_path: "./data/thumos2014/thumos_anno_action.json"
     num_frame: 5
     output_path: './data/thumos2014/test_output/'
 
