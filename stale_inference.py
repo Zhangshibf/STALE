@@ -45,7 +45,7 @@ if __name__ == '__main__':
     checkpoint = torch.load("/home/CE/zhangshi/checkpoint/STALE_best_50_split.pth.tar")
     new_state_dict={}
     for k, v in checkpoint['state_dict'].items():
-        if k not in [ "module.txt_model.text_model.embeddings.position_ids", "module.txt_model.vision_model.embeddings.position_ids"]:
+        if k not in ["module.txt_model.text_model.embeddings.position_ids", "module.txt_model.vision_model.embeddings.position_ids"]:
             new_state_dict[k]=v
 
     #model.load_state_dict(checkpoint['state_dict'])
