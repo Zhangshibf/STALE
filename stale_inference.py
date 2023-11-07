@@ -244,8 +244,8 @@ if __name__ == '__main__':
         print("Inference finished")
 
     ###### Post-Process #####
-    print("Start Post-Processing")
-    post_process_multi(multithread_detection,get_infer_dict)
-    print("End Post-Processing")
+    #print("Start Post-Processing")
+    #post_process_multi(multithread_detection,get_infer_dict)
+    #print("End Post-Processing")
     
         
