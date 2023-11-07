@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     ### Load Model ###
     model = STALE()
-    #model = torch.nn.DataParallel(model, device_ids=[0]).cuda()
+    model = torch.nn.DataParallel(model, device_ids=[0]).cuda()
     ### Load Checkpoint ###
     checkpoint = torch.load("/home/CE/zhangshi/checkpoint/STALE_best_50_split.pth.tar")
     model.load_state_dict(checkpoint['state_dict'])
