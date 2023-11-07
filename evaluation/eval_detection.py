@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
 
 pred_data = pd.read_csv("stale_output.csv")
 pred_videos = set(list(pred_data.video_name.values[:]))
-print(pred_videos)
-print(len(pred_videos))
+#print(pred_videos)
+#print(len(pred_videos))
 
 class ANETdetection(object):
     GROUND_TRUTH_FIELDS = ['database']
