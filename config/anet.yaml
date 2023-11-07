@@ -2,16 +2,16 @@ dataset:
   num_classes: 200
   split: 50
   training:
-    video_info_path: "./data/thumos2014_annotations/video_info_new.csv"
-    video_anno_path: "./data/thumos_annotations/anet_anno_action.json"
+    video_info_path: "./data/thumos2014/video_info_new.csv"
+    video_anno_path: "./data/thumos2014/anet_anno_action.json"
     num_frame: 5
-    output_path: './data/thumos_annotations/train_output/'
+    output_path: './data/thumos2014/train_output/'
     
   testing:
-    video_info_path: "./data/thumos2014_annotations/video_info_new.csv"
-    video_anno_path: "./data/thumos_annotations/anet_anno_action.json"
+    video_info_path: "./data/thumos2014/video_info_new.csv"
+    video_anno_path: "./data/thumos2014/anet_anno_action.json"
     num_frame: 5
-    output_path: './data/thumos_annotations/test_output/'
+    output_path: './data/thumos2014/test_output/'
 
 model:
   embedding_head: 4
