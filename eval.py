@@ -19,7 +19,7 @@ nms_thresh = config['testing']['nms_thresh']
 from evaluation.eval_detection import ANETdetection
 anet_detection = ANETdetection(
     ground_truth_filename="./evaluation/thumos_new.json",
-    prediction_filename="stale_output.csv"),
+    prediction_filename="stale_output.csv",
     subset='validation', verbose=False, check_status=False)
 
 anet_detection.evaluate()
