@@ -240,13 +240,9 @@ if __name__ == '__main__':
         ### save the proposals in a csv file ###
         col_name = ["video_name","xmin", "xmax", "clr_score", "reg_score","label"]
         new_df = pd.DataFrame(result, columns=col_name)
-        new_df.to_csv("stale_output.csv", index=False)   
+        new_df.to_csv("stale_output.csv", index=False)
+
 
         print("Inference finished")
-
-    ###### Post-Process #####
-    print("Start Post-Processing")
-    post_process_multi(multithread_detection,get_infer_dict)
-    print("End Post-Processing")
     
         
