@@ -1,1 +1,5 @@
-activity_dict={'CliffDiving': 0, 'CricketBowling': 1, 'FrisbeeCatch': 2, 'HammerThrow': 3, 'HighJump': 4, 'PoleVault': 5, 'SoccerPenalty': 6, 'TennisSwing': 7, 'ThrowDiscus': 8, 'VolleyballSpiking': 9}
+activity_dict={'BasketballDunk': 0, 'Billiards': 1, 'CliffDiving': 2, 'CricketBowling': 3, 'CricketShot': 4, 'GolfSwing': 5, 'PoleVault': 6, 'Shotput': 7, 'TennisSwing': 8, 'ThrowDiscus': 9}
+
+
+
+
