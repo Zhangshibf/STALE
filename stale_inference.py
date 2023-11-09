@@ -77,9 +77,11 @@ if __name__ == '__main__':
         best_cls = load_json("stale_best_score.json")
         
         for idx, vid in enumerate(infer_dict.keys()):
-            if vid in pred_videos:
-                vid = vid[2:] 
-                cls_data_cls[vid] = best_cls["v_"+vid]["class"] 
+            print(infer_dict[vid])
+            cls_data_cls[vid]='bla'
+            #if vid in pred_videos:
+            #    vid = vid[2:]
+            #    cls_data_cls[vid] = best_cls["v_"+vid]["class"]
 
         parallel = Parallel(n_jobs=15, prefer="processes")
         detection = parallel(delayed(detection_thread)(vid, video_cls, infer_dict['v_'+vid], label_dict, pred_data,best_cls)
@@ -242,5 +244,10 @@ if __name__ == '__main__':
 
 
         print("Inference finished")
+
+        ###### Post-Process #####
+        print("Start Post-Processing")
+        post_process_multi(multithread_detection, get_infer_dict)
+        print("End Post-Processing")
     
         
