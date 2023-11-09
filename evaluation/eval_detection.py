@@ -94,6 +94,7 @@ class ANETdetection(object):
         for videoid, v in data['database'].items():
             # print(videoid, pred_videos[2:])
             if videoid in pred_videos:
+                print(videoid)
                 subs = videoid.split("_")[1]
                 if subs == 'test':
                     subs = subs+"ing"
