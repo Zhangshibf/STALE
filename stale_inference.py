@@ -78,6 +78,7 @@ if __name__ == '__main__':
         
         for idx, vid in enumerate(infer_dict.keys()):
             print(infer_dict[vid])
+            break
             cls_data_cls[vid]='bla'
             #if vid in pred_videos:
             #    vid = vid[2:]
