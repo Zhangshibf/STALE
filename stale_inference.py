@@ -89,8 +89,9 @@ if __name__ == '__main__':
         detection_dict = {}
         [detection_dict.update(d) for d in detection]
         output_dict = {"version": "ANET v1.3, STALE", "results": detection_dict, "external_data": {}}
-
-        with open(output_path + '/detection_result_nms{}.json'.format(nms_thres), "w") as out:
+        out_path = output_path + '/detection_result_nms{}.json'.format(nms_thres)
+        print(out_path)
+        with open(out_path, "w") as out:
             json.dump(output_dict, out)
 
 

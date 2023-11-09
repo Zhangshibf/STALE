@@ -149,7 +149,6 @@ def multithread_detection(video_name,  video_info, label_dict, pred_prop, best_c
         # tmp_proposal["score"] = float(best_score)
         tmp_proposal["segment"] = [max(0, df.xmin.values[j]) * video_duration,
                                 min(1, df.xmax.values[j]) * video_duration]
-        print(tmp_proposal)
         proposal_list.append(tmp_proposal)
 
 
