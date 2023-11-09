@@ -110,12 +110,14 @@ def IOU(s1, e1, s2, e2):
 
 
 
-def multithread_detection(video_name, video_cls, video_info, label_dict, pred_prop, best_cls, num_prop=200, topk = 2):
+def multithread_detection(video_name,  video_info, label_dict, pred_prop, best_cls, num_prop=200, topk = 2):
     
     old_df = pred_prop[pred_prop.video_name == "v_"+video_name]
     # print(df)
-    best_score = best_cls["v_"+video_name]["score"]
-    best_label = best_cls["v_"+video_name]["class"]
+    #best_score = best_cls["v_"+video_name]["score"]
+    #best_label = best_cls["v_"+video_name]["class"]
+    best_score=-100
+    best_label="blablabla"
     
     df = pd.DataFrame()
     df['score'] = old_df.reg_score.values[:]*old_df.clr_score.values[:]
@@ -147,20 +149,6 @@ def multithread_detection(video_name, video_cls, video_info, label_dict, pred_pr
                                 min(1, df.xmax.values[j]) * video_duration]
         proposal_list.append(tmp_proposal)
 
-    # for j in range(min(100, len(df))):
-        
-    #     tmp_proposal = {}
-    #     tmp_proposal["label"] = best_label
-    #     # if float(df.score.values[j]) > best_score:
-    #         # tmp_proposal["label"] = str(df.label.values[j])
-    #     # else:
-    #     #     tmp_proposal["label"] = str(df.label.values[j])
-    #         # tmp_proposal["label"] = best_label
-
-    #     tmp_proposal["score"] = float(df.score.values[j])
-    #     tmp_proposal["segment"] = [max(0, df.xmin.values[j]) * video_duration,
-    #                             min(1, df.xmax.values[j]) * video_duration]
-    #     proposal_list.append(tmp_proposal)
 
     return {video_name: proposal_list}
 

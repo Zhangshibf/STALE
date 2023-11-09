@@ -77,15 +77,14 @@ if __name__ == '__main__':
         best_cls = load_json("stale_best_score.json")
         
         for idx, vid in enumerate(infer_dict.keys()):
-            print(infer_dict[vid])
-            break
-            cls_data_cls[vid]='bla'
+            cls_data_cls[vid] = 'blabla'
             #if vid in pred_videos:
-            #    vid = vid[2:]
-            #    cls_data_cls[vid] = best_cls["v_"+vid]["class"]
+                #vid = vid[2:]
+                #cls_data_cls[vid] = best_cls["v_"+vid]["class"]
+                #{video_name:"Blow-drying hair"}
 
         parallel = Parallel(n_jobs=15, prefer="processes")
-        detection = parallel(delayed(detection_thread)(vid, video_cls, infer_dict['v_'+vid], label_dict, pred_data,best_cls)
+        detection = parallel(delayed(detection_thread)(vid,  infer_dict[vid], label_dict, pred_data,best_cls)
                             for vid, video_cls in cls_data_cls.items())
         detection_dict = {}
         [detection_dict.update(d) for d in detection]
