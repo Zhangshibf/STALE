@@ -77,7 +77,6 @@ if __name__ == '__main__':
         best_cls = load_json("stale_best_score.json")
         
         for idx, vid in enumerate(infer_dict.keys()):
-            print(vid)
             cls_data_cls[vid] = 'blabla'
             #if vid in pred_videos:
                 #vid = vid[2:]
