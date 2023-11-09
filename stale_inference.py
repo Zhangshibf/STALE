@@ -86,6 +86,8 @@ if __name__ == '__main__':
         parallel = Parallel(n_jobs=15, prefer="processes")
         detection = parallel(delayed(detection_thread)(vid,  infer_dict[vid], label_dict, pred_data,best_cls)
                             for vid, video_cls in cls_data_cls.items())
+        print(detection)
+        print("-----------")
         detection_dict = {}
         [detection_dict.update(d) for d in detection]
         output_dict = {"version": "ANET v1.3, STALE", "results": detection_dict, "external_data": {}}
