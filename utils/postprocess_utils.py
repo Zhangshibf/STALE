@@ -132,7 +132,6 @@ def multithread_detection(video_name,  video_info, label_dict, pred_prop, best_c
         df = Soft_NMS(df, nms_thresh)
 
     df = df.sort_values(by="score", ascending=False)
-    print(df)
     video_duration=float(video_info["feature_frame"])/video_info["duration_frame"]*video_info["duration_second"]
     proposal_list = []
 
@@ -150,6 +149,7 @@ def multithread_detection(video_name,  video_info, label_dict, pred_prop, best_c
         # tmp_proposal["score"] = float(best_score)
         tmp_proposal["segment"] = [max(0, df.xmin.values[j]) * video_duration,
                                 min(1, df.xmax.values[j]) * video_duration]
+        print(tmp_proposal)
         proposal_list.append(tmp_proposal)
 
 
