@@ -52,7 +52,7 @@ def get_infer_dict():
             video_new_info['annotations'] = video_info['annotations']
             if len(video_anno) > 0:
                 video_label = video_info['annotations'][0]['label']
-                if video_subset == 'validation' :
+                if video_subset == 'testing':
                         video_dict[video_name] = video_new_info
                         video_label_dict[video_name] = video_label
     return video_dict , video_label_dict
