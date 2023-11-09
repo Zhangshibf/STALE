@@ -20,7 +20,7 @@ from evaluation.eval_detection import ANETdetection
 anet_detection = ANETdetection(
     ground_truth_filename="./evaluation/thumos_new.json",
     prediction_filename="./data/thumos2014/test_output//detection_result_nms0.6.json",
-    subset='validation', verbose=True, check_status=False)
+    subset='test', verbose=True, check_status=False)
 
 anet_detection.evaluate()
 
