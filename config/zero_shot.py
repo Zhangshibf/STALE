@@ -27,7 +27,7 @@ split_t2_test = [] ## 50:50 split
 
 with open('splits/train_50_test_50/THUMOS14/train/split_0.list', 'r') as filehandle:
     filecontents2 = filehandle.readlines()
-with open('splits/train_50_test_50/THUMOS14/test/split_5.list', 'r') as filehandle:
+with open('splits/train_50_test_50/THUMOS14/test/split_6.list', 'r') as filehandle:
     filecontents3 = filehandle.readlines()
 
 for files2 in filecontents2:
